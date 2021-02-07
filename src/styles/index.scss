@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+$custom-red: #f1356d;
+$custom-white: #f2f2f2;
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid $custom-white;
+  
+  & h1 {
+    color: $custom-red;
+  }
+
+  & .links {
+    margin-left: auto;
+  }
+
+  & a {
+    margin-left: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+    padding: 6px;
+  }
+  
+  & a:hover {
+    color: $custom-red;
+  }
+  
+  & button {
+    border-radius: 50%;
+    margin: 8px;
+    border: none;
+    font-size:medium;
+    background-color: white;
+  }
+  
+  & button:hover {
+    color: $custom-red;
+    background-color: $custom-white;
+  }
+  
+  & button:disabled,button[disabled] {
+    display: none;
+  }
+}
+
+.content {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid $custom-white;
+
+  & button { // cancel button
+    float: right;
+    border: none;
+    font-weight: bold;
+    background-color: $custom-red;
+    color: white;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    background-color: $custom-white;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  }
+  
+  & h2 {
+    font-size: 20px;
+    color: $custom-red;
+    margin-bottom: 8px;
+  }
+  & a{
+    text-decoration: none;
+  }  
+}
+
+/* blog details page */
+.blog-details {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  
+  & h2 {
+    font-size: 20px;
+    color: $custom-red;
+    margin-bottom: 10px;
+  }
+  & div {
+    margin: 20px 0;
+  }
+  & button {
+    background: $custom-red;
+    color: white;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+/* create new blog form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+
+  & label {
+    text-align: left;
+    display: block;
+  }
+
+  & h2 {
+    font-size: 20px;
+    color: $custom-red;
+    margin-bottom: 30px;
+  }
+
+  & input, & textarea, & select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid $custom-white;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  & textarea {
+    height: 300px !important;
+  }
+
+  & button {
+    background: $custom-red;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+.not-found {
+  text-align: center;
+  padding: 20%;
+  color: darkblue;
+  font-size: xx-large;
+  font: bold;
+}
